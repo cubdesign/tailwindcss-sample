@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex flex-1 flex-col justify-center items-center py-16 min-h-screen">
-        <h1
-          className="m-0 leading-tight text-6xl text-center
-     hover:no-underline focus:no-underline active:no-underline   
-        "
-        >
+        <h1 className="m-0 leading-tight text-6xl text-center hover:no-underline focus:no-underline active:no-underline">
           Welcome to{" "}
           <a href="https://nextjs.org" className="text-[#0070f3] no-underline">
             Next.js!
@@ -26,66 +22,35 @@ const Home: NextPage = () => {
 
         <p className="my-16 leading-normal text-2xl text-center">
           Get started by editing{" "}
-          <code
-            className="bg-[#fafafa]
-        rounded-lg p-3 
-    text-lg font-mono
-          
-          "
-          >
+          <code className="bg-[#fafafa] rounded-lg p-3 text-lg font-mono">
             pages/index.tsx
           </code>
         </p>
 
         <div className="flex items-center justify-center flex-wrap max-w-[800px]  w-full flex-col sm:flex-row">
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-          <a
+          <Card
+            href="https://nextjs.org/docs"
+            title="Documentation"
+            description="Learn more about Next.js in the documentation."
+          />
+          <Card
+            href="https://nextjs.org/learn"
+            title="Next.js Learn"
+            description="Learn about Next.js by following an interactive tutorial!"
+          />
+          <Card
             href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
+            title="Examples"
+            description="Find other example apps and documentation in the Next.js GitHub repository."
+          />
+          <Card
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            title="Create Next App"
+            description="Was this tool helpful? Let us know how we can improve it!"
+          />
         </div>
       </main>
-
-      <footer className="flex flex-1 py-8 border-t border-[#eaeaea] justify-center items-center">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-center items-content-center item-center flex-grow-1"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              width={72}
-              height={16}
-              className="h-4 ml-2"
-            />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 };
