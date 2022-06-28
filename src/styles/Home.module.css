@@ -1,0 +1,18 @@
+.grid {
+  @apply flex items-center justify-center flex-wrap max-w-[800px]  w-full flex-col sm:flex-row;
+}
+
+.card {
+  @apply m-4 p-6 text-left text-inherit no-underline border border-solid border-[#eaeaea] rounded-xl max-w-[300px] transition-colors 
+  hover:text-[#0070f3] hover:border-[#0070f3]
+focus:text-[#0070f3] focus:border-[#0070f3]
+  active:text-[#0070f3] active:border-[#0070f3]; /* transition: color 0.15s ease, border-color 0.15s ease; */
+}
+
+.card h2 {
+  @apply mb-4 text-2xl;
+}
+
+.card p {
+  @apply m-0 text-xl;
+}
